@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  pre-commit:
+  asyncio_single_threaded:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -14,10 +14,10 @@ jobs:
       with:
         python-version: '3.12'
         cache: 'pip'
-    # - name: Install dependencies
-    #   run: |
-    #     python -m pip install --upgrade pip
-    #     pip install -e .[dev]
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install -e .[dev]
     - name: Run asyncio_single_threaded
       run: |
         python -m asyncio_single_threaded
