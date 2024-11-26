@@ -68,10 +68,7 @@ async def gather_with_concurrency(n, *coros):
 
 async def main():
     work = range(9)
-    results = await gather_with_concurrency(
-        n=2,
-        *(pipeline(i) for i in work)
-    )
+    results = await gather_with_concurrency(2, *(pipeline(i) for i in work))
     print(results)
 
 
