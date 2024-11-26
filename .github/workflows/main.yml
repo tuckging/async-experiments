@@ -6,7 +6,7 @@ on:
     branches: [main]
 
 jobs:
-  async_single_threaded:
+  main:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
@@ -21,3 +21,6 @@ jobs:
     - name: Run async_single_threaded
       run: |
         python -m async_single_threaded
+    - name: Run async_single_threaded_batched_db
+      run: |
+        python -m async_single_threaded_batched_db
