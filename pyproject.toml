@@ -11,3 +11,8 @@ dependencies = []
 
 [project.optional-dependencies]
 dev = []
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["lynxscribe", "lynxscribe.*"]
+exclude = ["tests", "tests.*"]
