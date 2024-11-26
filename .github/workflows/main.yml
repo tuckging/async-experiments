@@ -20,7 +20,7 @@ jobs:
         pip install -e .[dev]
     - name: Run async_single_threaded
       run: |
-        python -m async_single_threaded
+        python -m async_experiments.async_single_threaded
     - name: Run async_single_threaded_batched_db
       run: |
-        python -m async_single_threaded_batched_db
+        python -m async_experiments.async_single_threaded_batched_db
