@@ -1,4 +1,4 @@
-name: async-single-threaded
+name: main
 
 on:
   pull_request:
